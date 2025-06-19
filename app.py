@@ -52,7 +52,7 @@ if st.button("SUMMARIZE THIS"):
         st.error("Please provide a valid URL")
 
 
-    # 2. Once inputs are validated, load the website,
+    # 2. Once inputs are validated, load the website data based on the URL type, create a chain, run the chain, process the output from chain
     else:
         try:
             with st.spinner("Summarizing it for you..."):
