@@ -1,4 +1,4 @@
-# Content Summarizer with Llama3 | LangChain & GroqAPI 🗒️
+# Content Summarizer with Llama3 | LangChain & GroqAPI
 
 Summarize content from any website or a YouTube video - with a click
 
