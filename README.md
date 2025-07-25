@@ -4,14 +4,14 @@ Summarize content from any website or a YouTube video - with a click
 
 ## Features
 
-> ### 🥇 **Multi-source content ingestion with smart loaders**
+> ### **1. Multi-source content ingestion with smart loaders**
 > Automatically detects whether the input URL is a YouTube video or a regular web page, then pulls data with `youtube-transcript-api` or LangChain’s `UnstructuredURLLoader` to build a clean Document object pipeline.
 
-> ### 🥈 **Dynamic summarization strategy based on real-time token counts**
+> ###  **2. Dynamic summarization strategy based on real-time token counts**
 > Uses a custom `count_tokens` helper (Hugging Face tokenizer) to measure prompt size and switch between ***stuff, map-reduce, or refine chains*** on the fly, keeping every request under Groq’s 12 k TPM ceiling while squeezing maximum context into Llama-3.3-70B.
 
-> ### 🥉 **Chunk‐aware splitting and selective context pruning**
-> Implements `RecursiveCharacterTextSplitter` with adjustable chunk/overlap sizes, then iteratively trims excess segments to stay within a configurable token budget, showcasing granular control over memory, latency, and cost for large-scale summarization workflows.
+> ###  **3. Chunk‐aware splitting and selective context pruning**
+> Implements `RecursiveCharacterTextSplitter` with adjustable chunk/overlap sizes, then iteratively trims excess segments to stay within a configurable token budget, this provides ability to have granular control over memory, latency, and cost for large-scale summarization workflows.
 
 ## How does it work?
 - The Python script leverages functionalities from LangChain and accesses Meta's llama-3.3-70b-versatile through Groq API
